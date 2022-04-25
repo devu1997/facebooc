@@ -1,0 +1,14 @@
+docker image build -t dev1997/facebooc:v1 .
+docker run -idtP dev1997/facebooc:v1
+docker image tag dev1997/facebooc:v1 dev1997/facebooc
+docker image push dev1997/facebooc
+docker image ls
+docker exec -it 3532f00151 sh
+   ldd /opt/facebooc/bin/facebooc
+cp Dockerfile Dockerfile-old
+Added multi-stage dockerfile...
+docker image build -t dev1997/facebooc:v2 .
+docker run -idtP dev1997/facebooc:v2
+docker image tag dev1997/facebooc:v2 dev1997/facebooc
+docker image ls 
+docker image push dev1997/facebooc
